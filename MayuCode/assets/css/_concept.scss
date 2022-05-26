@@ -1,0 +1,177 @@
+.concept {
+  margin-top: vw(390, 124);
+  background-image: url("../img/concept-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top: vw(390, 120);
+  padding-bottom: vw(390, 80);
+  @include mq(pc) {
+    background-position: 114px 0;
+    margin-top: vw(1366, 96);
+    margin-bottom: 5vw;
+    padding-top: vw(1366, 120);
+    padding-bottom: vw(1366, 53);
+
+  }
+}
+
+.concept-img__wrapper {
+  @include mq(pc) {
+    width: 80vw;
+    margin-left: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.concept-img {
+  width: vw(390, 360);
+  height: vw(390, 240);
+  margin: 0 auto;
+  @include mq(pc) {
+    width: vw(1366, 475);
+    height: vw(1366, 317);
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.concept-text__box {
+  margin-top: 5.5vw;
+  @include mq(pc) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-right: 6vw;
+    width: 31vw;
+  }
+
+}
+
+.concept-text__heading {
+  display: inline-block;
+  margin-left: 3vw;
+  padding: 3vw 4vw;
+  white-space: nowrap;
+  font-family: $font_base;
+  font-size: vw(390, 20);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: vw(390, 2);
+  left: vw(390, 2);
+  color: $white;
+  background-color: $main_color;
+  @include mq(pc) {
+    padding: vw(1366, 13) vw(1366, 16);
+    font-size: vw(1366, 28);
+    line-height: 1;
+    letter-spacing: vw(1366, 2.8);
+    text-align: right;
+  }
+
+  & + & {
+    margin-top: 2vw;
+
+    @include mq(pc) {
+      margin-top: vw(1366, 12);
+    }
+
+  }
+}
+
+
+.concept-text {
+  &__sub {
+    margin-top: 2vw;
+    text-align: center;
+    font-family: $font_base;
+    font-weight: 500;
+    color: $main_color;
+    font-size: vw(390, 16);
+    @include mq(pc) {
+      font-size: vw(1366, 20);
+    }
+  }
+
+  &__price {
+    font-family: $font_sub;
+    font-size: vw(390, 36);
+    line-height: 2.63;
+    letter-spacing: vw(390, 1.6);
+    color: $main_color;
+    @include mq(pc) {
+      font-size: vw(1366, 60);
+      line-height: 1.7;
+      letter-spacing: vw(1366, 2);
+    }
+  }
+}
+
+.concept-message__wrapper {
+  @include mq(pc) {
+    margin-top: vw(1366, 40);
+  }
+}
+
+.concept-message {
+  margin-top: 2vw;
+  font-family: $font_base;
+  font-weight: 500;
+  font-size: vw(390, 14);
+  line-height: 1.89;
+  letter-spacing: normal;
+  text-align: left;
+  color: $black;
+  @include mq(pc) {
+    font-size: vw(1366, 14);
+    width: 68vw;
+    margin-left: 14vw;
+  }
+}
+
+.more-btn {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2vw 18.5vw;
+  font-family: $font_base;
+  font-weight: 500;
+  font-size: vw(390, 14);
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: $main_color;
+  text-align: center;
+  border: 1px solid $main_color;
+  background-color: #fff;
+  @include mq(pc) {
+    font-size: vw(1366, 14);
+    padding: vw(1366, 13) vw(1366, 75);
+  }
+}
+
+.more__arrow {
+  margin-left: 16px;
+  font-size: vw(390, 16);
+  color: $main_color;
+  @include mq(pc) {
+    font-size: vw(1366, 16);
+  }
+}
+
+.concept-more__btn {
+  margin-top: 8vw;
+  @include mq(pc) {
+    margin-top: 2vw;
+  }
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

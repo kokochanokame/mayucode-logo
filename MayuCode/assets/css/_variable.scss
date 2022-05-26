@@ -1,0 +1,26 @@
+$black: #333;
+$black_sub: #0c162c;
+$main_color: #192f60;
+$ac_color: #20868a;
+$gray: #cacaca;
+$white: #fff;
+$font_base: heisei-kaku-gothic-stdn, sans-serif;
+$font_sub: NeueHaasGroteskTextPro-55Roman, sans-serif;
+$font_sub-middle: NeueHaasGroteskTextPro-65Roman;
+$font_sub-bold: NeueHaasGroteskTextPro-75Roman, sans-serif;
+$font_en: 'Quicksand Regular', arial;
+@font-face {
+  font-family: NeueHaasGroteskTextPro-55Roman;
+  src: url('../font/NHaasGroteskTXPro-55Rg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: NeueHaasGroteskTextPro-65Roman;
+  src: url('../font/NHaasGroteskTXPro-65Md.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: NeueHaasGroteskTextPro-75Roman;
+  src: url('../font/NHaasGroteskTXPro-75Bd.ttf') format('truetype');
+}
+

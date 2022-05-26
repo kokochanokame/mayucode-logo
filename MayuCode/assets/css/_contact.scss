@@ -1,0 +1,52 @@
+.contact {
+  padding-top: 20vw;
+  padding-bottom: vw(390, 80);
+  background-image: url("../img/contact-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq(pc) {
+    background-image: url("../img/contact01.png");
+    padding: 5vw 0;
+
+  }
+}
+
+.contact-heading {
+  margin-bottom: 8vw;
+  font-family: $font_base;
+  font-weight: 700;
+  font-size: vw(390, 18);
+  line-height: 2;
+  letter-spacing: vw(390, 1.8);
+  text-align: left;
+  color: $white;
+  @include mq(pc) {
+    margin-bottom: 0;
+    font-size: vw(1366, 24);
+    line-height: 1.5;
+    left: vw(1366, 2.4);
+    text-align: center;
+  }
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact-btn__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include mq(pc) {
+    flex-direction: row;
+    margin-top: vw(1366, 40);
+    width: vw(1366, 560);
+    justify-content: space-between;
+  }
+}

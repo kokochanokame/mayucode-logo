@@ -1,0 +1,52 @@
+.footer {
+  background-color: $main_color;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  margin-top: vw(390, 49.2);
+  width: vw(390, 120.5);
+  height: vw(390, 29.5);
+  @include mq(pc) {
+    margin-top: vw(1366, 49.2);
+    width: vw(1366, 120.5);
+    height: vw(1366, 29.5);
+  }
+}
+
+.footer-address {
+  margin-top: vw(390, 33.3);
+  font-family: $font_base;
+  font-weight: 300;
+  font-size: vw(390, 14);
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white;
+  @include mq(pc) {
+    margin-top: vw(1366, 33.3);
+    font-size: vw(1366, 16);
+    line-height: 1.2;
+  }
+}
+
+.footer-copy {
+  margin-top: 9vw;
+  margin-bottom: vw(390, 40);
+  font-family: $font_base;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: normal;
+  font-size: 11px;
+  color: #aeb6c7;
+  @include mq(pc) {
+    margin-top: vw(1366, 40);
+    margin-bottom: vw(1366, 40);
+  }
+}

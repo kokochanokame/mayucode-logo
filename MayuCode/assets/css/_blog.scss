@@ -1,0 +1,73 @@
+.blog {
+  padding: vw(390, 80) vw(390, 15);
+  background-image: url("../img/BLOG-2.png"), url("../img/blog_sp.png");
+  background-size: 43%, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, center;
+  @include mq(pc) {
+    margin-bottom: 8vw;
+    padding: vw(1366, 80) 0 vw(1366, 27) 0;
+    background-image: url("../img/BLOG-2.png"), url("../img/blog_pc.png");
+    background-size: 12%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 80vw top, center;
+  }
+}
+
+.blog__wrapper {
+  padding: 2vw 0 vw(390, 40) 0;
+  background-image: url("../img/news-list-item_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq(pc) {
+    margin: auto;
+    padding: 0;
+    width: 70vw;
+  }
+}
+
+.blog-text__box {
+  padding-bottom: 7.2vw;
+  width: vw(390, 312);
+  margin: 0 auto;
+  border-bottom: 1px solid #cacaca;
+  @include mq(pc) {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: vw(1366, 32) vw(1366, 53);
+    width: 49vw;
+
+  }
+}
+
+.blog-text__date {
+  margin-top: 8vw;
+  font-family: $font_en;
+  font-size: vw(390, 16);
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: #2d2d2d;
+  text-align: left;
+  @include mq(pc) {
+    margin-top: 0;
+    font-size: vw(1366, 16);
+  }
+}
+
+.blog-text__link {
+  font-family: $font_base;
+  font-weight: 300;
+  font-size: vw(390, 16);
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2d2d2d;
+  text-decoration: underline;
+  @include mq(pc) {
+    font-size: vw(1366, 16);
+  }
+}

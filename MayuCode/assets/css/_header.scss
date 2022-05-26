@@ -1,0 +1,278 @@
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  width: 100vw;
+  z-index: 300;
+}
+
+.header__inner {
+  width: vw(390, 360);
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq(pc) {
+    width: vw(1366, 1313);
+    height: vw(1366, 80);
+    margin-left: vw(1366, 53);
+  }
+}
+
+.header__logo {
+  width: 120px;
+  height: 29px;
+  @include mq(pc) {
+    width: vw(1366, 120);
+    height: vw(1366, 29);
+  }
+}
+
+
+.nav-btn {
+  border: transparent;
+  background: none;
+  width: 26px;
+  height: 16px;
+  position: relative;
+  z-index: 110;
+  @include mq(pc) {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    display: inline-block;
+    transition: all .5s;
+    width: 100%;
+    height: 2px;
+    background: #0C162C;
+    left: 0;
+    box-sizing: border-box;
+  }
+}
+
+.nav-btn span:nth-of-type(1) {
+  top: 0;
+}
+
+.nav-btn span:nth-of-type(2) {
+  top: 7px;
+}
+
+.nav-btn span:nth-of-type(3) {
+  top: 14px;
+}
+
+
+.nav-btn.open span:nth-of-type(1) {
+  top: 7px;
+  transform: rotate(35deg);
+}
+
+.nav-btn.open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.nav-btn.open span:nth-of-type(3) {
+  top: 7px;
+  transform: rotate(-35deg);
+}
+
+
+nav {
+  @include mq(sp) {
+    background: #fff;
+    padding-bottom: 80px;
+    width: 100vw;
+    position: absolute;
+    top: -500vh;
+    left: 0;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+  }
+
+}
+
+nav.open {
+  top: 80px;
+}
+
+.nav-items {
+  @include mq(pc) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: vw(1366, 48);
+  }
+}
+
+.nav-item__link {
+  white-space: nowrap;
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: $font_base;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: 500;
+  text-align: center;
+  color: $main_color;
+  @include mq(sp) {
+    display: inline-block;
+    padding-top: 38px;
+    padding-bottom: 12px;
+    position: relative;
+  }
+
+  @include mq(pc) {
+    font-size: vw(1366, 16);
+    letter-spacing: normal;
+  }
+
+  &::after {
+    position: absolute;
+    top: 60%;
+    left: -15vw;
+    content: "";
+    width: 10vw;
+    height: 2px;
+    background: $main_color;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+    @include mq(pc) {
+      top: 110%;
+      left: 0;
+      width: 105%;
+    }
+  }
+
+  &:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+.nav-item:last-child {
+  border-top: none;
+}
+
+
+.nav-item {
+  @include mq(sp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid $gray;
+  }
+
+}
+
+.nav-item__link-sub {
+  white-space: nowrap;
+  display: block;
+  font-family: $font_sub;
+  color: $black_sub;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
+  @include mq(pc) {
+    font-size: vw(1366, 13);
+  }
+}
+
+.nav-item__btn {
+  @include mq(sp) {
+    margin-top: 40px;
+  }
+}
+
+.top-tel {
+  white-space: nowrap;
+  font-family: $font_base;
+  font-weight: 500;
+  text-align: center;
+  color: $main_color;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: normal;
+  @include mq(pc) {
+    font-size: vw(1366, 16);
+  }
+}
+
+.tel__number {
+  white-space: nowrap;
+  display: block;
+  font-family: $font_sub;
+  color: $main_color;
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  @include mq(pc) {
+    font-size: vw(1366, 24);
+  }
+
+  .fa-phone {
+    margin-right: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+    @include mq(pc) {
+      font-size: 1.3vw;
+    }
+  }
+}
+
+.contact__btn {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: $font_base;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.3;
+  font-size: 20px;
+  color: $white;
+  text-align: center;
+  background-color: $ac_color;
+  padding: 15px 50px;
+  @include mq(pc) {
+    padding: vw(1366, 15) 1.7vw;
+    height: 100%;
+    font-size: vw(1366, 14);
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact__arrow {
+    font-size: 16px;
+    margin-left: 16px;
+    @include mq(pc) {
+      display: none;
+    }
+  }
+}
+
+.nav-item__btn {
+  @include mq(pc) {
+    position: relative;
+    height: 100%;
+
+  }
+}
+
+i.contact__mail.fa-solid.fa-envelope {
+  display: none;
+  @include mq(pc) {
+    display: block;
+    font-size: vw(1366, 24);
+  }
+}
+
+
+
